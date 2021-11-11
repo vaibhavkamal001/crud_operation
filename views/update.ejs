@@ -1,0 +1,21 @@
+<% layout('boilerplate') %>
+<div class="form">
+    <h1 class="text-center">Updata</h1>
+    <form action="/update/<%=data._id%>?_method=PATCH" method="post">
+        <div class="mt-4">
+            <label for="name" id="name">name</label>
+            <input type="text" name="data[name]" id="name" value="<%=data.name%>" required>
+        </div>
+        <div class="mt-4">
+            <label for="username" id="username">User name</label>
+            <input type="text" name="data[username]" id="username" value="<%=data.username%>" required>
+        </div>
+        <div class="mt-4">
+            <label for="password" id="password">Enter Password</label>
+            <input type="password" name="data[password]" id="password" required>
+        </div>
+        <div class="mt-4">
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<% layout('boilerplate') %>
+    <h1 class="text-center mt-4">Crud_Operation</h1>
+    <div class="text-center mt-4">
+        <a href="/register" class="btn btn-success">Create User</a>
+    </div>
+    <ul>
+        <% for(let i of users) {%>
+            <li>
+                <div class="mt-4">
+                    <h4>
+                        name : <%=i.name%>
+                    </h4>
+                    <h4>
+                        username : <%=i.username%>
+                    </h4>
+                    <form action="/delete/<%=i._id%>?_method=delete" method="post">
+                        <button type="submit" class="btn btn-sm btn-danger mt-3">Delete</button>
+                    </form>
+                    <a class="btn btn-sm btn-info mt-3" href="/update/<%=i._id%>">Update</a>
+                </div>
+            </li>
+            <% } %>
+    </ul>

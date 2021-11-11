@@ -1,0 +1,21 @@
+<% layout('boilerplate') %>
+    <div class="form">
+        <h1 class="text-center mt-4 mb-4">Create User</h1>
+        <form action="/register" method="post">
+            <div class="mt-4">
+                <label for="name" id="name">User name</label>
+                <input type="text" name="data[name]" id="name" required>
+            </div>
+            <div class="mt-4">
+                <label for="username" id="username">User name</label>
+                <input type="text" name="data[username]" id="username" required>
+            </div>
+            <div class="mt-4">
+                <label for="password" id="password">Password</label>
+                <input type="password" name="data[password]" id="password" required>
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-success" type="submit">register</button>
+            </div>
+        </form>
+    </div>
